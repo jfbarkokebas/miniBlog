@@ -1,0 +1,17 @@
+#USER REDUCER
+
+PARAMATEROS -> recebe um valor para gerenciar(state) e uma função para manipular esse valor (geralmente chamada dispatch)
+
+SINTAXE:
+
+1 >> sem action:
+
+const [number, dispatch] = usereducer(state, action) =>{
+    return Math.random(state)
+}
+
+// -> para executar a função basta chamar o dispatch num buttom ou num form...
+
+2 >> com action: 
+
+

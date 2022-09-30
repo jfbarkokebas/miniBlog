@@ -4,14 +4,17 @@ import { useState, useEffect } from 'react'
 import { useAuthentication } from '../../hooks/useAuthentication'
 
 const Register = () => {
-
+    //variaveis front end
     const[displayName, setDisplayName] = useState('')
     const[email, setEmail] = useState('')
     const[password, setPassword] = useState('')
     const[confirmPassword, setConfirmPassword] = useState('')
     const[error, setError] = useState('')
 
+    //variaveis back end
     const{createUser, error: authError, loading } = useAuthentication()
+
+    //.............................
 
     const handleSubmit = async (e) =>{
         e.preventDefault()
@@ -26,7 +29,7 @@ const Register = () => {
 
         if(password !== confirmPassword){
           setError('As senhas precisam ser iguais')
-          console.log('errou');
+    
           return
         }
 
